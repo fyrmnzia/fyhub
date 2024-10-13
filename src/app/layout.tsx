@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { VT323 } from "next/font/google";
 import "./globals.css";
 import NextAuthProvider from "@/providers/next-auth-provider";
 import NextThemeProvider from "@/providers/theme-provider";
 import GlobalState from "@/context";
 import Header from "@/components/header";
 
-const inter = Inter({ subsets: ["latin"] });
+const vt323 = VT323({ weight: ["400"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,6 +20,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body className="dark:bg-black">
         <NextThemeProvider>
           <NextAuthProvider>
